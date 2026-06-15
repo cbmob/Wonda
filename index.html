@@ -126,6 +126,52 @@ ul{
   text-shadow:2px 2px 0 #000;
 }
 
+.closed{
+  margin:12px 0 18px;
+  padding:12px;
+  background:#ff003c;
+  border:3px solid #fff;
+  border-radius:14px;
+  color:#fff;
+  font-weight:bold;
+  text-shadow:2px 2px 0 #000;
+  font-family:sans-serif;
+}
+
+.schedule{
+  display:grid;
+  gap:14px;
+}
+
+.day{
+  padding:16px;
+  background:#111;
+  border:3px solid #fff;
+  border-radius:16px;
+  box-shadow:0 5px 0 #000;
+}
+
+.day h3{
+  margin:0 0 10px;
+  color:#ffe600;
+  font-size:20px;
+  text-shadow:2px 2px 0 #000;
+}
+
+.day p{
+  margin:10px 0 0;
+  line-height:1.6;
+}
+
+.day b{
+  color:#00d9ff;
+}
+
+.closedDay{
+  background:#333;
+  opacity:.85;
+}
+
 .footer{
   text-align:center;
   padding:30px 10px 45px;
@@ -155,19 +201,62 @@ ul{
       Studio Wondaの選抜クラス。<br>
       技術だけではなく、努力・挑戦・表現・人間性を大切にします。
     </p>
-    <a class="btn" href="#news">JOIN THE W</a>
+    <a class="btn" href="#schedule">SCHEDULE CHECK</a>
   </div>
 </section>
 
-<section>
-  <div class="title">LESSON</div>
-  <div class="card red">
-    <h2>レッスン日程</h2>
-    <p>
-      次回レッスン：○月○日（○）<br>
-      時間：00:00〜00:00<br>
-      場所：Studio Wonda
-    </p>
+<section id="schedule">
+  <div class="title">SCHEDULE</div>
+  <div class="card">
+    <h2>2026年6月 スケジュール表</h2>
+
+    <div class="closed">
+      休館日：19日・20日・21日・28日・29日・30日
+    </div>
+
+    <div class="schedule">
+
+      <div class="day">
+        <h3>月曜日</h3>
+        <p><b>18:00〜19:00</b><br>月曜BREAKIN'クラス</p>
+        <p><b>19:00〜20:00</b><br>選抜バトルクラス</p>
+      </div>
+
+      <div class="day">
+        <h3>火曜日</h3>
+        <p><b>17:00〜17:40</b><br>キッズダンス ルッカクラス</p>
+        <p><b>17:45〜19:00</b><br>火曜選抜チームレッスン</p>
+        <p><b>19:00〜20:15</b><br>選抜火曜強化クラス</p>
+      </div>
+
+      <div class="day closedDay">
+        <h3>水曜日</h3>
+        <p>休館日</p>
+      </div>
+
+      <div class="day">
+        <h3>木曜日</h3>
+        <p><b>17:30〜18:10</b><br>ストリートダンス ルッコラクラス</p>
+        <p><b>18:15〜19:30</b><br>選抜木曜強化クラス</p>
+      </div>
+
+      <div class="day">
+        <h3>金曜日</h3>
+        <p><b>18:00〜18:40</b><br>Waackクラス</p>
+        <p><b>18:40〜19:40</b><br>金曜BREAKIN'クラス</p>
+      </div>
+
+      <div class="day">
+        <h3>土曜日</h3>
+        <p><b>15:00〜17:00</b><br>選抜 “W” クラス</p>
+      </div>
+
+      <div class="day">
+        <h3>日曜日</h3>
+        <p><b>15:00〜17:00</b><br>選抜 “W” クラス</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -208,7 +297,7 @@ ul{
   </div>
 </section>
 
-<section id="news">
+<section>
   <div class="title">W NEWS</div>
   <div class="card purple">
     <h2>選抜通信</h2>
