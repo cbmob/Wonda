@@ -104,6 +104,12 @@ section{
   text-shadow:2px 2px 0 #fff;
 }
 
+.card h3{
+  margin:20px 0 8px;
+  font-size:18px;
+  color:#ff0055;
+}
+
 .card p,.card li{
   font-family:sans-serif;
   font-weight:bold;
@@ -205,25 +211,67 @@ section{
   line-height:1.45;
 }
 
-.closedCard{
-  background:#ffe1ec;
-}
-
+.closedCard{background:#ffe1ec}
 .closedCard .dayLabel{
   background:linear-gradient(135deg,#ff0055,#ff77aa);
   color:#fff;
   text-shadow:1px 1px 0 #2b1700;
 }
 
-.wCard{
-  background:linear-gradient(135deg,#f2ddff,#fff);
-}
-
+.wCard{background:linear-gradient(135deg,#f2ddff,#fff)}
 .wCard .dayLabel{
   background:linear-gradient(135deg,#7b2cff,#ff4de3);
   color:#fff;
   text-shadow:1px 1px 0 #2b1700;
 }
+
+.lessonGuide{
+  display:grid;
+  gap:14px;
+}
+
+.guideBox{
+  border:4px solid #2b1700;
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 5px 0 #2b1700;
+}
+
+.guideBox summary{
+  cursor:pointer;
+  list-style:none;
+  padding:16px;
+  color:#fff;
+  font-size:18px;
+  text-shadow:2px 2px 0 #2b1700;
+  border-bottom:4px solid #2b1700;
+}
+
+.guideBox summary::-webkit-details-marker{display:none}
+
+.guideContent{
+  padding:16px;
+  font-family:sans-serif;
+}
+
+.guideContent p{
+  margin:0 0 14px;
+}
+
+.guideContent ul{
+  margin:6px 0 14px;
+  padding-left:20px;
+}
+
+.guideContent strong{
+  color:#ff0055;
+}
+
+.g1 summary{background:linear-gradient(135deg,#ff0055,#ff8a00)}
+.g2 summary{background:linear-gradient(135deg,#006dff,#00c8ff)}
+.g3 summary{background:linear-gradient(135deg,#00a85a,#69ff8f)}
+.g4 summary{background:linear-gradient(135deg,#7b2cff,#ff4de3)}
 
 .eventCard{background:linear-gradient(135deg,#d8f3ff,#fff)}
 .trainCard{background:linear-gradient(135deg,#d9ffe8,#fff)}
@@ -347,6 +395,160 @@ ul{padding-left:20px}
           <div class="lessonItem"><span class="time">15:00〜17:00</span><span class="name">選抜 “W” クラス</span></div>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="fade">
+  <div class="title">W LESSON</div>
+  <div class="card">
+    <h2>まず知っておくべきこと4選</h2>
+    <p>選抜クラスで大切にしてほしい基本です。項目をタップすると開きます。</p>
+
+    <div class="lessonGuide">
+
+      <details class="guideBox g1">
+        <summary>1. 基礎練習</summary>
+        <div class="guideContent">
+          <p>
+            基礎練は先生もずっとやっています。<br>
+            歴1年の初心者も、歴20年のベテランも、ダンスが上手くなるには必須です。
+          </p>
+
+          <h3>オールジャンル共通</h3>
+          <ul>
+            <li>アップ、ダウン</li>
+            <li>ウェーブ</li>
+            <li>ヒット</li>
+            <li>ステップ</li>
+          </ul>
+
+          <h3>Waack まずはこの5つ</h3>
+          <ul>
+            <li>腕を振る</li>
+            <li>身体を反る</li>
+            <li>ポージング</li>
+            <li>表情</li>
+            <li>軸を取る</li>
+          </ul>
+
+          <h3>BREAKIN' まずはこの5つ</h3>
+          <ul>
+            <li>チェアー</li>
+            <li>3点倒立</li>
+            <li>倒立</li>
+            <li>肘倒立</li>
+            <li>バックスピン</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="guideBox g2">
+        <summary>2. 知識</summary>
+        <div class="guideContent">
+          <h3>HIPHOPについて知る</h3>
+          <p>
+            <strong>4大要素</strong><br>
+            MC・DJ・BBOY・Graffiti
+          </p>
+          <p>
+            <strong>HIPHOPの精神</strong><br>
+            PEACE（平和）、UNITY（団結）、LOVE（愛）、HAVING FUN（楽しむこと）
+          </p>
+          <p>
+            HIPHOPはカルチャー（文化）です。<br>
+            リスペクト、レペゼン、マインド、ファッションなど、自分がストリートダンサーであるという自覚を持つことも大切です。
+          </p>
+
+          <h3>ジャンルのオリジネーターを知る</h3>
+          <p>
+            どのジャンルにも歴史を作って来たダンサーが必ずいます。<br>
+            今、先生含めみんながダンスを踊れているのは、その人達の活躍・行動があったからこそです。<br>
+            リスペクトを込めて歴史に興味を持ってください。
+          </p>
+
+          <h3>ダンサーをたくさん知る</h3>
+          <p>
+            愛媛のダンサー、全国のダンサー、世界のダンサー、たくさんの先生、同年代のライバル。<br>
+            数えきれないほどのダンサーが活動しています。
+          </p>
+          <p>
+            自分が出たイベントの審査員、優勝者、活躍した人、印象に残った人を覚えるところから始めましょう。<br>
+            出ていないイベントでも、気になるイベント、大きなイベントは同様に覚えていきましょう。
+          </p>
+          <p>
+            選抜のノートではたくさんのダンサーをお送りしますので、必ず覚えてください。
+          </p>
+
+          <h3>Crewをたくさん知る</h3>
+          <p>
+            ダンサーも大事ですが、クルーを覚えることでより楽しむことが出来ます。<br>
+            Waackのクルーは少ないですが、HIPHOPやBREAKIN'はとても多いです。
+          </p>
+
+          <p><strong>愛媛のCrew例</strong></p>
+          <ul>
+            <li>LOCKのCREW：BROTHER SOUL</li>
+            <li>BREAKIN'のCREW：CB COMPANY</li>
+            <li>BREAKIN'のCREW：五十崎HEALTHY-TOUR</li>
+            <li>BREAKIN'のCREW：HOT EAST CREW</li>
+          </ul>
+
+          <p>
+            ただバトルに出るだけのCrewはCrewではありません。<br>
+            ライフスタイルを共有出来たり、同じ熱量で動ける仲間との活動をCrewと言います。
+          </p>
+
+          <h3>音楽をたくさん知る</h3>
+          <p>
+            ダンサーにとって音楽はとても重要です。<br>
+            たくさん聴いて、たくさん知って、たくさん踊りましょう。<br>
+            アーティストにもリスペクトを持ってください。
+          </p>
+
+          <h3>イベントをたくさん知る</h3>
+          <p>
+            全国各地に様々なイベントがあります。<br>
+            主催者をオーガナイザーと呼びます。
+          </p>
+          <p>
+            Kohki先生もチームメイトと協力しながらたくさんのイベントを開催しています。<br>
+            例：PB2、エミフルBREAKIN' CUP、BREAKIN'愛媛選手権など
+          </p>
+          <p>
+            目標とするイベントを決めるだけでもモチベーションになりますので、たくさんのイベントを観てください。<br>
+            最近ではYouTubeや各SNSでたくさん観ることが出来ます。
+          </p>
+        </div>
+      </details>
+
+      <details class="guideBox g3">
+        <summary>3. ストレッチ</summary>
+        <div class="guideContent">
+          <p>
+            身体のケアも怠らないようにしましょう。<br>
+            前屈、開脚、首を回すなど簡単なことでも構いませんので、毎日実施してください。
+          </p>
+        </div>
+      </details>
+
+      <details class="guideBox g4">
+        <summary>4. 日々の積み重ね</summary>
+        <div class="guideContent">
+          <p>
+            基礎練、音楽を聴く、ダンサーの動画を観る、自分のノートを見返す。<br>
+            毎日少しでもダンスに触れることが大事です。
+          </p>
+          <p>
+            もちろん目標の高さは人それぞれですが、本気で上を目指している人は常に動き、常に新しい知識を取り入れています。
+          </p>
+          <p>
+            どこまでやるかは個人の自由。<br>
+            その上で、選抜のみなさんにはこのカルチャーで本気になることの素晴らしさも知ってもらいたいと思っています。
+          </p>
+        </div>
+      </details>
 
     </div>
   </div>
