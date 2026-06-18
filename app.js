@@ -1,5 +1,7 @@
 'use strict';
 
+let activeScheduleIndex = 1;
+
 function esc(text){
   return String(text)
     .replaceAll('&','&amp;')
@@ -39,34 +41,53 @@ function keepNames(text){
   return out;
 }
 
-function renderSchedule(){
-  const root = document.getElementById('scheduleMonths');
+function renderScheduleTabs(){
+  const tabs = document.getElementById('scheduleTabs');
+  if(!tabs) return;
+
+  tabs.innerHTML = SCHEDULE_MONTHS.map((month, index) => `
+    <button class="scheduleTab ${index === activeScheduleIndex ? 'active' : ''}" type="button" data-schedule-index="${index}">
+      ${keepNames(month.tab)}
+    </button>
+  `).join('');
+
+  tabs.querySelectorAll('.scheduleTab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeScheduleIndex = Number(btn.dataset.scheduleIndex);
+      renderScheduleTabs();
+      renderSchedulePanel();
+    });
+  });
+}
+
+function renderSchedulePanel(){
+  const root = document.getElementById('schedulePanel');
   if(!root) return;
 
-  root.innerHTML = SCHEDULE_MONTHS.map(month => `
-    <div class="card">
-      <div class="monthTitle">${keepNames(month.monthTitle)}</div>
-      <div class="closedNotice">${keepNames(month.closedNotice)}</div>
-      <div class="scheduleList">
-        ${month.days.map(day => {
-          const cls = day.type === 'closed' ? 'dayCard closedCard' : day.type === 'w' ? 'dayCard wCard' : 'dayCard';
-          return `
-            <div class="${cls}">
-              <div class="dayLabel">${keepNames(day.day)}</div>
-              <div class="lessonBox">
-                ${day.lessons.map(item => `
-                  <div class="lessonItem">
-                    <span class="time">${keepNames(item[0])}</span>
-                    <span class="name">${keepNames(item[1])}</span>
-                  </div>
-                `).join('')}
-              </div>
+  const month = SCHEDULE_MONTHS[activeScheduleIndex];
+
+  root.innerHTML = `
+    <div class="monthTitle">${keepNames(month.monthTitle)}</div>
+    <div class="closedNotice">${keepNames(month.closedNotice)}</div>
+    <div class="scheduleList">
+      ${month.days.map(day => {
+        const cls = day.type === 'closed' ? 'dayCard closedCard' : day.type === 'w' ? 'dayCard wCard' : 'dayCard';
+        return `
+          <div class="${cls}">
+            <div class="dayLabel">${keepNames(day.day)}</div>
+            <div class="lessonBox">
+              ${day.lessons.map(item => `
+                <div class="lessonItem">
+                  <span class="time">${keepNames(item[0])}</span>
+                  <span class="name">${keepNames(item[1])}</span>
+                </div>
+              `).join('')}
             </div>
-          `;
-        }).join('')}
-      </div>
+          </div>
+        `;
+      }).join('')}
     </div>
-  `).join('');
+  `;
 }
 
 function renderEvents(){
@@ -163,7 +184,8 @@ function setupFade(){
   items.forEach(item => observer.observe(item));
 }
 
-renderSchedule();
+renderScheduleTabs();
+renderSchedulePanel();
 renderEvents();
 renderWNews();
 renderGuide();
