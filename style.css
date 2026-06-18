@@ -1,0 +1,376 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:"Arial Black","Hiragino Kaku Gothic ProN",sans-serif;
+  background:linear-gradient(180deg,#fff7df 0%,#ffe08a 34%,#ff9a5a 68%,#fff2cf 100%);
+  color:#2b1700;
+  overflow-x:hidden;
+}
+
+section{
+  max-width:560px;
+  margin:0 auto;
+  padding:44px 14px;
+}
+
+.fade{
+  opacity:0;
+  transform:translateY(32px);
+  transition:opacity .9s ease,transform .9s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 18%,#ff0055 0 8%,transparent 9%),
+    radial-gradient(circle at 82% 20%,#00b7ff 0 8%,transparent 9%),
+    radial-gradient(circle at 50% 50%,#fff200 0 17%,#ff8a00 18%,transparent 38%),
+    linear-gradient(145deg,#ffe600,#ff8a00,#ff4d00);
+  border-bottom:8px solid #2b1700;
+}
+
+.logoBox{
+  width:100%;
+  padding:40px 14px;
+  border:5px solid #fff;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff0055,#ff8a00,#fff200);
+  box-shadow:0 0 0 6px #2b1700,0 12px 0 #7a2c00,0 0 36px #fff200;
+  transform:rotate(-2deg);
+}
+
+.tag{
+  color:#fff9b0;
+  text-shadow:2px 2px 0 #2b1700;
+  font-size:14px;
+}
+
+.logoBox h1{
+  margin:8px 0;
+  font-size:48px;
+  line-height:.9;
+  color:#fff;
+  text-shadow:4px 4px 0 #2b1700,-3px -3px 0 #ff0055;
+}
+
+.catch{
+  margin-top:16px;
+  display:inline-block;
+  padding:9px 16px;
+  background:#fff;
+  color:#2b1700;
+  border:4px solid #2b1700;
+  border-radius:999px;
+}
+
+.title{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:8px 18px;
+  background:#fff200;
+  color:#2b1700;
+  border:4px solid #2b1700;
+  box-shadow:6px 6px 0 #ff0055;
+  transform:rotate(-2deg);
+  font-size:22px;
+}
+
+.card{
+  padding:20px;
+  border:4px solid #fff;
+  border-radius:24px;
+  background:rgba(255,255,255,.88);
+  box-shadow:0 8px 0 #2b1700,0 0 22px rgba(255,255,255,.5);
+}
+
+.card h2{
+  margin:0 0 12px;
+  font-size:24px;
+  color:#ff4d00;
+  text-shadow:2px 2px 0 #fff;
+}
+
+.card h3{
+  margin:20px 0 8px;
+  font-size:18px;
+  color:#ff0055;
+}
+
+.card p,.card li{
+  font-family:sans-serif;
+  font-weight:bold;
+  line-height:1.8;
+  font-size:15px;
+}
+
+.btn{
+  display:block;
+  margin-top:16px;
+  padding:16px;
+  text-align:center;
+  color:#fff;
+  text-decoration:none;
+  border:4px solid #fff;
+  border-radius:18px;
+  background:linear-gradient(135deg,#ff0055,#ff8a00);
+  box-shadow:0 7px 0 #2b1700;
+  text-shadow:2px 2px 0 #2b1700;
+}
+
+.monthTitle{
+  text-align:center;
+  font-size:28px;
+  color:#2b1700;
+  margin-bottom:12px;
+}
+
+.closedNotice{
+  margin-bottom:18px;
+  padding:14px;
+  background:#ff0055;
+  color:#fff;
+  border:3px solid #fff;
+  border-radius:16px;
+  font-family:sans-serif;
+  font-weight:bold;
+  line-height:1.7;
+  text-shadow:1px 1px 0 #2b1700;
+}
+
+.scheduleList,
+.lessonGuide,
+.reportGrid,
+.musicBlocks{
+  display:grid;
+  gap:14px;
+}
+
+.dayCard{
+  display:grid;
+  grid-template-columns:86px 1fr;
+  gap:12px;
+  padding:14px;
+  background:#fff8dd;
+  border:4px solid #2b1700;
+  border-radius:18px;
+  box-shadow:0 5px 0 #2b1700;
+  font-family:sans-serif;
+}
+
+.dayLabel{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:72px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ff8a00,#fff200);
+  border:3px solid #fff;
+  color:#2b1700;
+  text-align:center;
+  font-family:"Arial Black","Hiragino Kaku Gothic ProN",sans-serif;
+  font-size:18px;
+  line-height:1.2;
+}
+
+.lessonBox{
+  display:grid;
+  gap:8px;
+}
+
+.lessonItem{
+  padding:10px;
+  background:#fff;
+  border:2px solid #2b1700;
+  border-radius:12px;
+}
+
+.time{
+  display:block;
+  color:#ff0055;
+  font-weight:900;
+  font-size:14px;
+  margin-bottom:3px;
+}
+
+.name{
+  display:block;
+  color:#2b1700;
+  font-weight:900;
+  font-size:15px;
+  line-height:1.45;
+}
+
+.closedCard{background:#ffe1ec}
+
+.closedCard .dayLabel{
+  background:linear-gradient(135deg,#ff0055,#ff77aa);
+  color:#fff;
+  text-shadow:1px 1px 0 #2b1700;
+}
+
+.wCard{background:linear-gradient(135deg,#f2ddff,#fff)}
+
+.wCard .dayLabel{
+  background:linear-gradient(135deg,#7b2cff,#ff4de3);
+  color:#fff;
+  text-shadow:1px 1px 0 #2b1700;
+}
+
+.guideBox,
+.reportMonth,
+.musicBlock{
+  border:4px solid #2b1700;
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 5px 0 #2b1700;
+}
+
+.guideBox summary,
+.reportMonth summary,
+.musicBlock summary{
+  cursor:pointer;
+  list-style:none;
+  padding:16px;
+  color:#fff;
+  font-size:18px;
+  text-shadow:2px 2px 0 #2b1700;
+  border-bottom:4px solid #2b1700;
+}
+
+.guideBox summary::-webkit-details-marker,
+.reportMonth summary::-webkit-details-marker,
+.musicBlock summary::-webkit-details-marker{
+  display:none;
+}
+
+.guideContent,
+.reportBody,
+.musicBody{
+  padding:16px;
+  font-family:sans-serif;
+}
+
+.guideContent p,
+.reportBody p{
+  margin:0 0 14px;
+  font-weight:bold;
+  line-height:1.8;
+  font-size:15px;
+}
+
+.guideContent ul{
+  margin:6px 0 14px;
+  padding-left:20px;
+}
+
+.guideContent strong{
+  color:#ff0055;
+}
+
+.g1 summary,.m1 summary,.mb1 summary{background:linear-gradient(135deg,#ff0055,#ff8a00)}
+.g2 summary,.m2 summary,.mb2 summary{background:linear-gradient(135deg,#006dff,#00c8ff)}
+.g3 summary,.m3 summary,.mb3 summary{background:linear-gradient(135deg,#00a85a,#69ff8f)}
+.g4 summary,.m4 summary,.mb4 summary{background:linear-gradient(135deg,#7b2cff,#ff4de3)}
+.m5 summary,.mb5 summary{background:linear-gradient(135deg,#ffb000,#fff200)}
+.m6 summary{background:linear-gradient(135deg,#ff3b3b,#ff0055)}
+
+.reportIntro,
+.musicLead{
+  margin-bottom:16px;
+  padding:14px;
+  background:#fff8dd;
+  border:3px solid #2b1700;
+  border-radius:18px;
+  font-family:sans-serif;
+  font-weight:bold;
+  line-height:1.7;
+}
+
+.musicCard{
+  background:linear-gradient(135deg,#fff,#ffe7f2);
+}
+
+.recordIcon{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  margin:0 auto 12px;
+  background:
+    radial-gradient(circle,#fff 0 7px,#2b1700 8px 12px,#ff0055 13px 18px,#111 19px 34px,#fff200 35px 37px,#111 38px);
+  border:5px solid #2b1700;
+  box-shadow:0 6px 0 #2b1700,0 0 20px #ff0055;
+  animation:spin 8s linear infinite;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+.song{
+  padding:14px;
+  background:#fff8dd;
+  border:3px solid #2b1700;
+  border-radius:18px;
+  box-shadow:0 4px 0 #2b1700;
+  margin-bottom:14px;
+}
+
+.song h3{
+  margin:0 0 8px;
+  color:#ff0055;
+  font-size:18px;
+}
+
+.song p{
+  margin:0 0 12px;
+  font-weight:bold;
+  line-height:1.7;
+  font-size:14px;
+}
+
+.song a{
+  display:inline-block;
+  padding:9px 13px;
+  background:#ff003c;
+  color:#fff;
+  text-decoration:none;
+  border-radius:999px;
+  border:2px solid #2b1700;
+  font-weight:900;
+  box-shadow:0 3px 0 #2b1700;
+}
+
+.eventCard{background:linear-gradient(135deg,#d8f3ff,#fff)}
+.trainCard{background:linear-gradient(135deg,#d9ffe8,#fff)}
+.newsCard{background:linear-gradient(135deg,#f2ddff,#fff)}
+
+ul{padding-left:20px}
+
+.footer{
+  text-align:center;
+  padding:32px 10px 45px;
+  color:#7a2c00;
+  font-size:12px;
+}
+
+@media(max-width:380px){
+  .dayCard{
+    grid-template-columns:74px 1fr;
+    gap:10px;
+    padding:12px;
+  }
+
+  .dayLabel{font-size:16px}
+  .name{font-size:14px}
+}
