@@ -8,7 +8,6 @@
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 body{
   margin:0;
   font-family:"Arial Black","Hiragino Kaku Gothic ProN",sans-serif;
@@ -16,25 +15,11 @@ body{
   color:#2b1700;
   overflow-x:hidden;
 }
-
-section{
-  max-width:560px;
-  margin:0 auto;
-  padding:44px 14px;
-}
-
-.fade{
-  opacity:0;
-  transform:translateY(32px);
-  transition:opacity .9s ease, transform .9s ease;
-}
+section{max-width:560px;margin:0 auto;padding:44px 14px}
+.fade{opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s ease}
 .fade.show{opacity:1;transform:translateY(0)}
-
 .hero{
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  text-align:center;
+  min-height:88vh;display:flex;align-items:center;text-align:center;
   background:
     radial-gradient(circle at 20% 18%,#ff0055 0 8%,transparent 9%),
     radial-gradient(circle at 82% 20%,#00b7ff 0 8%,transparent 9%),
@@ -42,313 +27,118 @@ section{
     linear-gradient(145deg,#ffe600,#ff8a00,#ff4d00);
   border-bottom:8px solid #2b1700;
 }
-
 .logoBox{
-  width:100%;
-  padding:40px 14px;
-  border:5px solid #fff;
-  border-radius:30px;
+  width:100%;padding:40px 14px;border:5px solid #fff;border-radius:30px;
   background:linear-gradient(135deg,#ff0055,#ff8a00,#fff200);
   box-shadow:0 0 0 6px #2b1700,0 12px 0 #7a2c00,0 0 36px #fff200;
   transform:rotate(-2deg);
 }
-
-.tag{
-  color:#fff9b0;
-  text-shadow:2px 2px 0 #2b1700;
-  font-size:14px;
-}
-
-.logoBox h1{
-  margin:8px 0;
-  font-size:48px;
-  line-height:.9;
-  color:#fff;
-  text-shadow:4px 4px 0 #2b1700,-3px -3px 0 #ff0055;
-}
-
-.catch{
-  margin-top:16px;
-  display:inline-block;
-  padding:9px 16px;
-  background:#fff;
-  color:#2b1700;
-  border:4px solid #2b1700;
-  border-radius:999px;
-}
-
+.tag{color:#fff9b0;text-shadow:2px 2px 0 #2b1700;font-size:14px}
+.logoBox h1{margin:8px 0;font-size:48px;line-height:.9;color:#fff;text-shadow:4px 4px 0 #2b1700,-3px -3px 0 #ff0055}
+.catch{margin-top:16px;display:inline-block;padding:9px 16px;background:#fff;color:#2b1700;border:4px solid #2b1700;border-radius:999px}
 .title{
-  display:inline-block;
-  margin-bottom:18px;
-  padding:8px 18px;
-  background:#fff200;
-  color:#2b1700;
-  border:4px solid #2b1700;
-  box-shadow:6px 6px 0 #ff0055;
-  transform:rotate(-2deg);
-  font-size:22px;
+  display:inline-block;margin-bottom:18px;padding:8px 18px;background:#fff200;color:#2b1700;
+  border:4px solid #2b1700;box-shadow:6px 6px 0 #ff0055;transform:rotate(-2deg);font-size:22px;
 }
-
 .card{
-  padding:20px;
-  border:4px solid #fff;
-  border-radius:24px;
-  background:rgba(255,255,255,.88);
+  padding:20px;border:4px solid #fff;border-radius:24px;background:rgba(255,255,255,.88);
   box-shadow:0 8px 0 #2b1700,0 0 22px rgba(255,255,255,.5);
 }
-
-.card h2{
-  margin:0 0 12px;
-  font-size:24px;
-  color:#ff4d00;
-  text-shadow:2px 2px 0 #fff;
-}
-
-.card h3{
-  margin:20px 0 8px;
-  font-size:18px;
-  color:#ff0055;
-}
-
-.card p,.card li{
-  font-family:sans-serif;
-  font-weight:bold;
-  line-height:1.8;
-  font-size:15px;
-}
-
+.card h2{margin:0 0 12px;font-size:24px;color:#ff4d00;text-shadow:2px 2px 0 #fff}
+.card h3{margin:20px 0 8px;font-size:18px;color:#ff0055}
+.card p,.card li{font-family:sans-serif;font-weight:bold;line-height:1.8;font-size:15px}
 .btn{
-  display:block;
-  margin-top:16px;
-  padding:16px;
-  text-align:center;
-  color:#fff;
-  text-decoration:none;
-  border:4px solid #fff;
-  border-radius:18px;
-  background:linear-gradient(135deg,#ff0055,#ff8a00);
-  box-shadow:0 7px 0 #2b1700;
-  text-shadow:2px 2px 0 #2b1700;
+  display:block;margin-top:16px;padding:16px;text-align:center;color:#fff;text-decoration:none;
+  border:4px solid #fff;border-radius:18px;background:linear-gradient(135deg,#ff0055,#ff8a00);
+  box-shadow:0 7px 0 #2b1700;text-shadow:2px 2px 0 #2b1700;
 }
 
 /* schedule */
-.monthTitle{
-  text-align:center;
-  font-size:28px;
-  color:#2b1700;
-  margin-bottom:12px;
-}
-
+.monthTitle{text-align:center;font-size:28px;color:#2b1700;margin-bottom:12px}
 .closedNotice{
-  margin-bottom:18px;
-  padding:14px;
-  background:#ff0055;
-  color:#fff;
-  border:3px solid #fff;
-  border-radius:16px;
-  font-family:sans-serif;
-  font-weight:bold;
-  line-height:1.7;
-  text-shadow:1px 1px 0 #2b1700;
+  margin-bottom:18px;padding:14px;background:#ff0055;color:#fff;border:3px solid #fff;border-radius:16px;
+  font-family:sans-serif;font-weight:bold;line-height:1.7;text-shadow:1px 1px 0 #2b1700;
 }
-
-.scheduleList{
-  display:grid;
-  gap:14px;
-}
-
+.scheduleList{display:grid;gap:14px}
 .dayCard{
-  display:grid;
-  grid-template-columns:86px 1fr;
-  gap:12px;
-  padding:14px;
-  background:#fff8dd;
-  border:4px solid #2b1700;
-  border-radius:18px;
-  box-shadow:0 5px 0 #2b1700;
-  font-family:sans-serif;
+  display:grid;grid-template-columns:86px 1fr;gap:12px;padding:14px;background:#fff8dd;
+  border:4px solid #2b1700;border-radius:18px;box-shadow:0 5px 0 #2b1700;font-family:sans-serif;
 }
-
 .dayLabel{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:72px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#ff8a00,#fff200);
-  border:3px solid #fff;
-  color:#2b1700;
-  text-align:center;
-  font-family:"Arial Black","Hiragino Kaku Gothic ProN",sans-serif;
-  font-size:18px;
-  line-height:1.2;
+  display:flex;align-items:center;justify-content:center;min-height:72px;border-radius:14px;
+  background:linear-gradient(135deg,#ff8a00,#fff200);border:3px solid #fff;color:#2b1700;
+  text-align:center;font-family:"Arial Black","Hiragino Kaku Gothic ProN",sans-serif;font-size:18px;line-height:1.2;
 }
-
-.lessonBox{
-  display:grid;
-  gap:8px;
-}
-
-.lessonItem{
-  padding:10px;
-  background:#fff;
-  border:2px solid #2b1700;
-  border-radius:12px;
-}
-
-.time{
-  display:block;
-  color:#ff0055;
-  font-weight:900;
-  font-size:14px;
-  margin-bottom:3px;
-}
-
-.name{
-  display:block;
-  color:#2b1700;
-  font-weight:900;
-  font-size:15px;
-  line-height:1.45;
-}
-
+.lessonBox{display:grid;gap:8px}
+.lessonItem{padding:10px;background:#fff;border:2px solid #2b1700;border-radius:12px}
+.time{display:block;color:#ff0055;font-weight:900;font-size:14px;margin-bottom:3px}
+.name{display:block;color:#2b1700;font-weight:900;font-size:15px;line-height:1.45}
 .closedCard{background:#ffe1ec}
-.closedCard .dayLabel{
-  background:linear-gradient(135deg,#ff0055,#ff77aa);
-  color:#fff;
-  text-shadow:1px 1px 0 #2b1700;
-}
-
+.closedCard .dayLabel{background:linear-gradient(135deg,#ff0055,#ff77aa);color:#fff;text-shadow:1px 1px 0 #2b1700}
 .wCard{background:linear-gradient(135deg,#f2ddff,#fff)}
-.wCard .dayLabel{
-  background:linear-gradient(135deg,#7b2cff,#ff4de3);
-  color:#fff;
-  text-shadow:1px 1px 0 #2b1700;
+.wCard .dayLabel{background:linear-gradient(135deg,#7b2cff,#ff4de3);color:#fff;text-shadow:1px 1px 0 #2b1700}
+
+/* accordion */
+.lessonGuide,.reportGrid{display:grid;gap:14px}
+.guideBox,.reportMonth{
+  border:4px solid #2b1700;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 5px 0 #2b1700;
 }
-
-/* guide */
-.lessonGuide{
-  display:grid;
-  gap:14px;
+.guideBox summary,.reportMonth summary{
+  cursor:pointer;list-style:none;padding:16px;color:#fff;font-size:18px;text-shadow:2px 2px 0 #2b1700;border-bottom:4px solid #2b1700;
 }
-
-.guideBox{
-  border:4px solid #2b1700;
-  border-radius:18px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:0 5px 0 #2b1700;
-}
-
-.guideBox summary{
-  cursor:pointer;
-  list-style:none;
-  padding:16px;
-  color:#fff;
-  font-size:18px;
-  text-shadow:2px 2px 0 #2b1700;
-  border-bottom:4px solid #2b1700;
-}
-
-.guideBox summary::-webkit-details-marker{display:none}
-
-.guideContent{
-  padding:16px;
-  font-family:sans-serif;
-}
-
-.guideContent p{
-  margin:0 0 14px;
-}
-
-.guideContent ul{
-  margin:6px 0 14px;
-  padding-left:20px;
-}
-
-.guideContent strong{
-  color:#ff0055;
-}
-
-.g1 summary{background:linear-gradient(135deg,#ff0055,#ff8a00)}
-.g2 summary{background:linear-gradient(135deg,#006dff,#00c8ff)}
-.g3 summary{background:linear-gradient(135deg,#00a85a,#69ff8f)}
-.g4 summary{background:linear-gradient(135deg,#7b2cff,#ff4de3)}
-
-/* report */
-.reportIntro{
-  margin-bottom:16px;
-  padding:14px;
-  background:#fff8dd;
-  border:3px solid #2b1700;
-  border-radius:18px;
-  font-family:sans-serif;
-  font-weight:bold;
-  line-height:1.7;
-}
-
-.reportGrid{
-  display:grid;
-  gap:14px;
-}
-
-.reportMonth{
-  border:4px solid #2b1700;
-  border-radius:20px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:0 5px 0 #2b1700;
-}
-
-.reportMonth summary{
-  cursor:pointer;
-  list-style:none;
-  padding:15px 16px;
-  color:#fff;
-  font-size:19px;
-  text-shadow:2px 2px 0 #2b1700;
-  border-bottom:4px solid #2b1700;
-}
-
-.reportMonth summary::-webkit-details-marker{display:none}
-
-.reportBody{
-  padding:16px;
-  font-family:sans-serif;
-}
-
-.reportBody p{
-  margin:0 0 14px;
-  font-weight:bold;
-  line-height:1.8;
-  font-size:15px;
-}
-
-.m1 summary{background:linear-gradient(135deg,#ff0055,#ff8a00)}
-.m2 summary{background:linear-gradient(135deg,#009dff,#00d9ff)}
-.m3 summary{background:linear-gradient(135deg,#00a85a,#85ff5c)}
-.m4 summary{background:linear-gradient(135deg,#7b2cff,#ff4de3)}
+.guideBox summary::-webkit-details-marker,.reportMonth summary::-webkit-details-marker{display:none}
+.guideContent,.reportBody{padding:16px;font-family:sans-serif}
+.guideContent p,.reportBody p{margin:0 0 14px;font-weight:bold;line-height:1.8;font-size:15px}
+.guideContent ul{margin:6px 0 14px;padding-left:20px}
+.guideContent strong{color:#ff0055}
+.g1 summary,.m1 summary{background:linear-gradient(135deg,#ff0055,#ff8a00)}
+.g2 summary,.m2 summary{background:linear-gradient(135deg,#006dff,#00c8ff)}
+.g3 summary,.m3 summary{background:linear-gradient(135deg,#00a85a,#69ff8f)}
+.g4 summary,.m4 summary{background:linear-gradient(135deg,#7b2cff,#ff4de3)}
 .m5 summary{background:linear-gradient(135deg,#ffb000,#fff200)}
 .m6 summary{background:linear-gradient(135deg,#ff3b3b,#ff0055)}
+.reportIntro{
+  margin-bottom:16px;padding:14px;background:#fff8dd;border:3px solid #2b1700;border-radius:18px;
+  font-family:sans-serif;font-weight:bold;line-height:1.7;
+}
 
+/* music */
+.musicCard{background:linear-gradient(135deg,#fff,#ffe7f2)}
+.musicLead{
+  padding:14px;margin-bottom:16px;background:#fff8dd;border:3px solid #2b1700;border-radius:18px;
+  font-family:sans-serif;font-weight:bold;line-height:1.7;
+}
+.recordIcon{
+  width:76px;height:76px;border-radius:50%;margin:0 auto 12px;
+  background:
+    radial-gradient(circle,#fff 0 7px,#2b1700 8px 12px,#ff0055 13px 18px,#111 19px 34px,#fff200 35px 37px,#111 38px);
+  border:5px solid #2b1700;
+  box-shadow:0 6px 0 #2b1700,0 0 20px #ff0055;
+  animation:spin 8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.musicTools{display:grid;gap:10px;margin:14px 0}
+.searchInput{
+  width:100%;padding:14px;border:3px solid #2b1700;border-radius:14px;font-size:16px;font-weight:bold;
+}
+.musicList{display:grid;gap:12px;margin-top:14px}
+.song{
+  padding:14px;background:#fff;border:3px solid #2b1700;border-radius:18px;
+  box-shadow:0 4px 0 #2b1700;font-family:sans-serif;
+}
+.songTitle{font-weight:900;font-size:17px;color:#ff0055;margin-bottom:6px}
+.songComment{font-weight:bold;line-height:1.7;font-size:14px;margin-bottom:10px}
+.youtube{
+  display:inline-block;padding:9px 13px;background:#ff003c;color:#fff;text-decoration:none;border-radius:999px;
+  border:2px solid #2b1700;font-weight:900;box-shadow:0 3px 0 #2b1700;
+}
 .eventCard{background:linear-gradient(135deg,#d8f3ff,#fff)}
 .trainCard{background:linear-gradient(135deg,#d9ffe8,#fff)}
 .newsCard{background:linear-gradient(135deg,#f2ddff,#fff)}
 ul{padding-left:20px}
-
-.footer{
-  text-align:center;
-  padding:32px 10px 45px;
-  color:#7a2c00;
-  font-size:12px;
-}
-
+.footer{text-align:center;padding:32px 10px 45px;color:#7a2c00;font-size:12px}
 @media(max-width:380px){
-  .dayCard{
-    grid-template-columns:74px 1fr;
-    gap:10px;
-    padding:12px;
-  }
+  .dayCard{grid-template-columns:74px 1fr;gap:10px;padding:12px}
   .dayLabel{font-size:16px}
   .name{font-size:14px}
 }
@@ -371,10 +161,9 @@ ul{padding-left:20px}
   <div class="title">ABOUT</div>
   <div class="card">
     <h2>Studio Wonda</h2>
-    <p>
-      ダンスを通して、挑戦する力・表現する力・仲間を大切にする心を育てます。
-    </p>
+    <p>ダンスを通して、挑戦する力・表現する力・仲間を大切にする心を育てます。</p>
     <a class="btn" href="#schedule">スケジュールを見る</a>
+    <a class="btn" href="#music">曲紹介を見る</a>
   </div>
 </section>
 
@@ -382,10 +171,7 @@ ul{padding-left:20px}
   <div class="title">選抜クラス “W”</div>
   <div class="card">
     <h2>W CLASS</h2>
-    <p>
-      Studio Wondaの選抜クラス。<br>
-      技術だけではなく、努力・挑戦・表現・人間性を大切にします。
-    </p>
+    <p>Studio Wondaの選抜クラス。<br>技術だけではなく、努力・挑戦・表現・人間性を大切にします。</p>
   </div>
 </section>
 
@@ -393,67 +179,41 @@ ul{padding-left:20px}
   <div class="title">SCHEDULE</div>
   <div class="card">
     <div class="monthTitle">2026年6月 スケジュール</div>
-
-    <div class="closedNotice">
-      休館日：6月19日・20日・21日・28日・29日・30日
-    </div>
+    <div class="closedNotice">休館日：6月19日・20日・21日・28日・29日・30日</div>
 
     <div class="scheduleList">
+      <div class="dayCard"><div class="dayLabel">月曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">18:00〜19:00</span><span class="name">月曜BREAKIN'クラス</span></div>
+        <div class="lessonItem"><span class="time">19:00〜20:00</span><span class="name">選抜バトルクラス</span></div>
+      </div></div>
 
-      <div class="dayCard">
-        <div class="dayLabel">月曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">18:00〜19:00</span><span class="name">月曜BREAKIN'クラス</span></div>
-          <div class="lessonItem"><span class="time">19:00〜20:00</span><span class="name">選抜バトルクラス</span></div>
-        </div>
-      </div>
+      <div class="dayCard"><div class="dayLabel">火曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">17:00〜17:40</span><span class="name">キッズダンス ルッカクラス</span></div>
+        <div class="lessonItem"><span class="time">17:45〜19:00</span><span class="name">火曜選抜チームレッスン</span></div>
+        <div class="lessonItem"><span class="time">19:00〜20:15</span><span class="name">選抜火曜強化クラス</span></div>
+      </div></div>
 
-      <div class="dayCard">
-        <div class="dayLabel">火曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">17:00〜17:40</span><span class="name">キッズダンス ルッカクラス</span></div>
-          <div class="lessonItem"><span class="time">17:45〜19:00</span><span class="name">火曜選抜チームレッスン</span></div>
-          <div class="lessonItem"><span class="time">19:00〜20:15</span><span class="name">選抜火曜強化クラス</span></div>
-        </div>
-      </div>
+      <div class="dayCard closedCard"><div class="dayLabel">水曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">CLOSED</span><span class="name">休館日</span></div>
+      </div></div>
 
-      <div class="dayCard closedCard">
-        <div class="dayLabel">水曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">CLOSED</span><span class="name">休館日</span></div>
-        </div>
-      </div>
+      <div class="dayCard"><div class="dayLabel">木曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">17:30〜18:10</span><span class="name">ストリートダンス ルッコラクラス</span></div>
+        <div class="lessonItem"><span class="time">18:15〜19:30</span><span class="name">選抜木曜強化クラス</span></div>
+      </div></div>
 
-      <div class="dayCard">
-        <div class="dayLabel">木曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">17:30〜18:10</span><span class="name">ストリートダンス ルッコラクラス</span></div>
-          <div class="lessonItem"><span class="time">18:15〜19:30</span><span class="name">選抜木曜強化クラス</span></div>
-        </div>
-      </div>
+      <div class="dayCard"><div class="dayLabel">金曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">18:00〜18:40</span><span class="name">Waackクラス</span></div>
+        <div class="lessonItem"><span class="time">18:40〜19:40</span><span class="name">金曜BREAKIN'クラス</span></div>
+      </div></div>
 
-      <div class="dayCard">
-        <div class="dayLabel">金曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">18:00〜18:40</span><span class="name">Waackクラス</span></div>
-          <div class="lessonItem"><span class="time">18:40〜19:40</span><span class="name">金曜BREAKIN'クラス</span></div>
-        </div>
-      </div>
+      <div class="dayCard wCard"><div class="dayLabel">土曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">15:00〜17:00</span><span class="name">選抜 “W” クラス</span></div>
+      </div></div>
 
-      <div class="dayCard wCard">
-        <div class="dayLabel">土曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">15:00〜17:00</span><span class="name">選抜 “W” クラス</span></div>
-        </div>
-      </div>
-
-      <div class="dayCard wCard">
-        <div class="dayLabel">日曜</div>
-        <div class="lessonBox">
-          <div class="lessonItem"><span class="time">15:00〜17:00</span><span class="name">選抜 “W” クラス</span></div>
-        </div>
-      </div>
-
+      <div class="dayCard wCard"><div class="dayLabel">日曜</div><div class="lessonBox">
+        <div class="lessonItem"><span class="time">15:00〜17:00</span><span class="name">選抜 “W” クラス</span></div>
+      </div></div>
     </div>
   </div>
 </section>
@@ -465,149 +225,38 @@ ul{padding-left:20px}
     <p>選抜クラスで大切にしてほしい基本です。項目をタップすると開きます。</p>
 
     <div class="lessonGuide">
+      <details class="guideBox g1"><summary>1. 基礎練習</summary><div class="guideContent">
+        <p>基礎練は先生もずっとやっています。<br>歴1年の初心者も、歴20年のベテランも、ダンスが上手くなるには必須です。</p>
+        <h3>オールジャンル共通</h3><ul><li>アップ、ダウン</li><li>ウェーブ</li><li>ヒット</li><li>ステップ</li></ul>
+        <h3>Waack まずはこの5つ</h3><ul><li>腕を振る</li><li>身体を反る</li><li>ポージング</li><li>表情</li><li>軸を取る</li></ul>
+        <h3>BREAKIN' まずはこの5つ</h3><ul><li>チェアー</li><li>3点倒立</li><li>倒立</li><li>肘倒立</li><li>バックスピン</li></ul>
+      </div></details>
 
-      <details class="guideBox g1">
-        <summary>1. 基礎練習</summary>
-        <div class="guideContent">
-          <p>
-            基礎練は先生もずっとやっています。<br>
-            歴1年の初心者も、歴20年のベテランも、ダンスが上手くなるには必須です。
-          </p>
+      <details class="guideBox g2"><summary>2. 知識</summary><div class="guideContent">
+        <h3>HIPHOPについて知る</h3>
+        <p><strong>4大要素</strong><br>MC・DJ・BBOY・Graffiti</p>
+        <p><strong>HIPHOPの精神</strong><br>PEACE（平和）、UNITY（団結）、LOVE（愛）、HAVING FUN（楽しむこと）</p>
+        <p>HIPHOPはカルチャー（文化）です。<br>リスペクト、レペゼン、マインド、ファッションなど、自分がストリートダンサーであるという自覚を持つことも大切です。</p>
+        <h3>ジャンルのオリジネーターを知る</h3>
+        <p>どのジャンルにも歴史を作って来たダンサーが必ずいます。今、先生含めみんながダンスを踊れているのは、その人達の活躍・行動があったからこそです。</p>
+        <h3>ダンサーをたくさん知る</h3>
+        <p>愛媛のダンサー、全国のダンサー、世界のダンサー、たくさんの先生、同年代のライバル。数えきれないほどのダンサーが活動しています。</p>
+        <p>選抜のノートではたくさんのダンサーをお送りしますので、必ず覚えてください。</p>
+        <h3>Crewをたくさん知る</h3>
+        <ul><li>LOCKのCREW：BROTHER SOUL</li><li>BREAKIN'のCREW：CB COMPANY</li><li>BREAKIN'のCREW：五十崎HEALTHY-TOUR</li><li>BREAKIN'のCREW：HOT EAST CREW</li></ul>
+        <p>ただバトルに出るだけのCrewはCrewではありません。ライフスタイルを共有出来たり、同じ熱量で動ける仲間との活動をCrewと言います。</p>
+        <h3>音楽をたくさん知る</h3><p>ダンサーにとって音楽はとても重要です。たくさん聴いて、たくさん知って、たくさん踊りましょう。</p>
+        <h3>イベントをたくさん知る</h3><p>全国各地に様々なイベントがあります。主催者をオーガナイザーと呼びます。例：PB2、エミフルBREAKIN' CUP、BREAKIN'愛媛選手権など。</p>
+      </div></details>
 
-          <h3>オールジャンル共通</h3>
-          <ul>
-            <li>アップ、ダウン</li>
-            <li>ウェーブ</li>
-            <li>ヒット</li>
-            <li>ステップ</li>
-          </ul>
+      <details class="guideBox g3"><summary>3. ストレッチ</summary><div class="guideContent">
+        <p>身体のケアも怠らないようにしましょう。<br>前屈、開脚、首を回すなど簡単なことでも構いませんので、毎日実施してください。</p>
+      </div></details>
 
-          <h3>Waack まずはこの5つ</h3>
-          <ul>
-            <li>腕を振る</li>
-            <li>身体を反る</li>
-            <li>ポージング</li>
-            <li>表情</li>
-            <li>軸を取る</li>
-          </ul>
-
-          <h3>BREAKIN' まずはこの5つ</h3>
-          <ul>
-            <li>チェアー</li>
-            <li>3点倒立</li>
-            <li>倒立</li>
-            <li>肘倒立</li>
-            <li>バックスピン</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="guideBox g2">
-        <summary>2. 知識</summary>
-        <div class="guideContent">
-          <h3>HIPHOPについて知る</h3>
-          <p>
-            <strong>4大要素</strong><br>
-            MC・DJ・BBOY・Graffiti
-          </p>
-          <p>
-            <strong>HIPHOPの精神</strong><br>
-            PEACE（平和）、UNITY（団結）、LOVE（愛）、HAVING FUN（楽しむこと）
-          </p>
-          <p>
-            HIPHOPはカルチャー（文化）です。<br>
-            リスペクト、レペゼン、マインド、ファッションなど、自分がストリートダンサーであるという自覚を持つことも大切です。
-          </p>
-
-          <h3>ジャンルのオリジネーターを知る</h3>
-          <p>
-            どのジャンルにも歴史を作って来たダンサーが必ずいます。<br>
-            今、先生含めみんながダンスを踊れているのは、その人達の活躍・行動があったからこそです。<br>
-            リスペクトを込めて歴史に興味を持ってください。
-          </p>
-
-          <h3>ダンサーをたくさん知る</h3>
-          <p>
-            愛媛のダンサー、全国のダンサー、世界のダンサー、たくさんの先生、同年代のライバル。<br>
-            数えきれないほどのダンサーが活動しています。
-          </p>
-          <p>
-            自分が出たイベントの審査員、優勝者、活躍した人、印象に残った人を覚えるところから始めましょう。<br>
-            出ていないイベントでも、気になるイベント、大きなイベントは同様に覚えていきましょう。
-          </p>
-          <p>
-            選抜のノートではたくさんのダンサーをお送りしますので、必ず覚えてください。
-          </p>
-
-          <h3>Crewをたくさん知る</h3>
-          <p>
-            ダンサーも大事ですが、クルーを覚えることでより楽しむことが出来ます。<br>
-            Waackのクルーは少ないですが、HIPHOPやBREAKIN'はとても多いです。
-          </p>
-
-          <p><strong>愛媛のCrew例</strong></p>
-          <ul>
-            <li>LOCKのCREW：BROTHER SOUL</li>
-            <li>BREAKIN'のCREW：CB COMPANY</li>
-            <li>BREAKIN'のCREW：五十崎HEALTHY-TOUR</li>
-            <li>BREAKIN'のCREW：HOT EAST CREW</li>
-          </ul>
-
-          <p>
-            ただバトルに出るだけのCrewはCrewではありません。<br>
-            ライフスタイルを共有出来たり、同じ熱量で動ける仲間との活動をCrewと言います。
-          </p>
-
-          <h3>音楽をたくさん知る</h3>
-          <p>
-            ダンサーにとって音楽はとても重要です。<br>
-            たくさん聴いて、たくさん知って、たくさん踊りましょう。<br>
-            アーティストにもリスペクトを持ってください。
-          </p>
-
-          <h3>イベントをたくさん知る</h3>
-          <p>
-            全国各地に様々なイベントがあります。<br>
-            主催者をオーガナイザーと呼びます。
-          </p>
-          <p>
-            Kohki先生もチームメイトと協力しながらたくさんのイベントを開催しています。<br>
-            例：PB2、エミフルBREAKIN' CUP、BREAKIN'愛媛選手権など
-          </p>
-          <p>
-            目標とするイベントを決めるだけでもモチベーションになりますので、たくさんのイベントを観てください。<br>
-            最近ではYouTubeや各SNSでたくさん観ることが出来ます。
-          </p>
-        </div>
-      </details>
-
-      <details class="guideBox g3">
-        <summary>3. ストレッチ</summary>
-        <div class="guideContent">
-          <p>
-            身体のケアも怠らないようにしましょう。<br>
-            前屈、開脚、首を回すなど簡単なことでも構いませんので、毎日実施してください。
-          </p>
-        </div>
-      </details>
-
-      <details class="guideBox g4">
-        <summary>4. 日々の積み重ね</summary>
-        <div class="guideContent">
-          <p>
-            基礎練、音楽を聴く、ダンサーの動画を観る、自分のノートを見返す。<br>
-            毎日少しでもダンスに触れることが大事です。
-          </p>
-          <p>
-            もちろん目標の高さは人それぞれですが、本気で上を目指している人は常に動き、常に新しい知識を取り入れています。
-          </p>
-          <p>
-            どこまでやるかは個人の自由。<br>
-            その上で、選抜のみなさんにはこのカルチャーで本気になることの素晴らしさも知ってもらいたいと思っています。
-          </p>
-        </div>
-      </details>
-
+      <details class="guideBox g4"><summary>4. 日々の積み重ね</summary><div class="guideContent">
+        <p>基礎練、音楽を聴く、ダンサーの動画を観る、自分のノートを見返す。<br>毎日少しでもダンスに触れることが大事です。</p>
+        <p>どこまでやるかは個人の自由。<br>その上で、選抜のみなさんにはこのカルチャーで本気になることの素晴らしさも知ってもらいたいと思っています。</p>
+      </div></details>
     </div>
   </div>
 </section>
@@ -616,124 +265,38 @@ ul{padding-left:20px}
   <div class="title">REPORT</div>
   <div class="card">
     <h2>活動レポート</h2>
-
-    <div class="reportIntro">
-      2026年<br>
-      - 選抜クラスの活動 -
-    </div>
-
+    <div class="reportIntro">2026年<br>- 選抜クラスの活動 -</div>
     <div class="reportGrid">
-
-      <details class="reportMonth m1">
-        <summary>1月</summary>
-        <div class="reportBody">
-          <p>
-            毎年恒例のHOT EAST SUNDAY × PB2のコラボイベント。<br>
-            今回はシャッフル4on4。<br>
-            結果、Syuri、Kurumiが優勝。<br>
-            来年もみんなで楽しみましょう。
-          </p>
-        </div>
-      </details>
-
-      <details class="reportMonth m2">
-        <summary>2月</summary>
-        <div class="reportBody">
-          <p>
-            岡山のバトルにUL mio、Syuri、Lu-Laが参戦。<br>
-            それぞれ持ち味を活かした良いムーブを出せていました。<br>
-            四国外でも勝てるようたくさん挑戦しましょう。
-          </p>
-          <p>
-            全日本選手権にChill Cが出場。<br>
-            世界で戦うbgirlとバトルし、大きな経験値となりました。<br>
-            今年のブロック予選も全力で挑み、全国の舞台で予選通過を目指しましょう。
-          </p>
-        </div>
-      </details>
-
-      <details class="reportMonth m3">
-        <summary>3月</summary>
-        <div class="reportBody">
-          <p>
-            BREAKIN'愛媛選手権にチャレンジ。<br>
-            結果、Lu-Laがベスト4。次こそは優勝へ。<br>
-            wreathが軍鶏から1票取る活躍を見せ、ヘイスケさんから個人賞を獲得。
-          </p>
-          <p>
-            Stay HungryへLu-La、Chill Cがチャレンジ。<br>
-            モータルコンバットの貴重なバトルを観ることが出来ました。<br>
-            関西関東のバトルにもたくさんチャレンジしていきましょう。
-          </p>
-        </div>
-      </details>
-
-      <details class="reportMonth m4">
-        <summary>4月</summary>
-        <div class="reportBody">
-          <p>
-            高知の2on2バトルへLu-La & wreath、YumeTAP & Yuna-X、Chill Cが挑戦。<br>
-            wreath、Yuna-Xは自分のスタイルを見つけつつある中での挑戦で、やりたいことの見える挑戦でした。
-          </p>
-          <p>
-            Chill Cは初のサイファーバトル。<br>
-            積極的にトライして良いムーブも出ていました。<br>
-            YumeTAP、Lu-Laはハイレベルなbboyとサイファーを楽しんでかなりの経験値となりました。
-          </p>
-          <p>
-            BREAKIN' SUMMITへ挑戦。<br>
-            練習から本番まで本当によく頑張ってくれました。<br>
-            優勝チームとバトル出来たのは素晴らしい経験。<br>
-            勝つ力があるので諦めず挑み続けましょう。
-          </p>
-          <p>
-            徳島のBB BATTLEへKurumiが挑戦し、ベスト8。<br>
-            四国を代表する若手HIPHOPダンサーから1票獲得。<br>
-            自信を持って次はリベンジしましょう。
-          </p>
-          <p>
-            今年も龍王春祭りへ。<br>
-            1人1人が盛り上げる意識を持って、楽しみながら楽しませるを心がけましょう。<br>
-            来年も楽しみです。
-          </p>
-        </div>
-      </details>
-
-      <details class="reportMonth m5">
-        <summary>5月</summary>
-        <div class="reportBody">
-          <p>
-            BB BATTLEでKyokaがベスト8。<br>
-            ハイレベルな予選を乗り越えたのは素晴らしい結果です。
-          </p>
-          <p>
-            今年もワンダ交流会を開催。<br>
-            みんな良い顔で楽しんでいました。<br>
-            Lu-La、wreath、ナイスMCでした。
-          </p>
-        </div>
-      </details>
-
-      <details class="reportMonth m6" open>
-        <summary>6月</summary>
-        <div class="reportBody">
-          <p>
-            BB BATTLE本戦でKyokaがトーナメント進出をかけてバトル。<br>
-            結果は2-1と惜敗。
-          </p>
-          <p>
-            結果もですが、ムーブからとても成長を感じるナイスチャレンジでした。<br>
-            サミットで悔しいと涙した経験が今の成長に繋がっています。
-          </p>
-          <p>
-            ダンサーはマインドがとても大切。<br>
-            負けてすぐ走り回って遊ぶ子も多いですが、結局残るのは悔しいと思えるダンサー、次を見据えて行動出来るダンサーです。<br>
-            年齢は関係ありません。
-          </p>
-        </div>
-      </details>
-
+      <details class="reportMonth m1"><summary>1月</summary><div class="reportBody"><p>毎年恒例のHOT EAST SUNDAY × PB2のコラボイベント。<br>今回はシャッフル4on4。<br>結果、Syuri、Kurumiが優勝。<br>来年もみんなで楽しみましょう。</p></div></details>
+      <details class="reportMonth m2"><summary>2月</summary><div class="reportBody"><p>岡山のバトルにUL mio、Syuri、Lu-Laが参戦。<br>それぞれ持ち味を活かした良いムーブを出せていました。<br>四国外でも勝てるようたくさん挑戦しましょう。</p><p>全日本選手権にChill Cが出場。<br>世界で戦うbgirlとバトルし、大きな経験値となりました。</p></div></details>
+      <details class="reportMonth m3"><summary>3月</summary><div class="reportBody"><p>BREAKIN'愛媛選手権にチャレンジ。<br>結果、Lu-Laがベスト4。次こそは優勝へ。<br>wreathが軍鶏から1票取る活躍を見せ、ヘイスケさんから個人賞を獲得。</p><p>Stay HungryへLu-La、Chill Cがチャレンジ。<br>モータルコンバットの貴重なバトルを観ることが出来ました。</p></div></details>
+      <details class="reportMonth m4"><summary>4月</summary><div class="reportBody"><p>高知の2on2バトルへLu-La & wreath、YumeTAP & Yuna-X、Chill Cが挑戦。</p><p>BREAKIN' SUMMITへ挑戦。練習から本番まで本当によく頑張ってくれました。</p><p>徳島のBB BATTLEへKurumiが挑戦し、ベスト8。</p><p>今年も龍王春祭りへ。来年も楽しみです。</p></div></details>
+      <details class="reportMonth m5"><summary>5月</summary><div class="reportBody"><p>BB BATTLEでKyokaがベスト8。<br>ハイレベルな予選を乗り越えたのは素晴らしい結果です。</p><p>今年もワンダ交流会を開催。<br>みんな良い顔で楽しんでいました。<br>Lu-La、wreath、ナイスMCでした。</p></div></details>
+      <details class="reportMonth m6" open><summary>6月</summary><div class="reportBody"><p>BB BATTLE本戦でKyokaがトーナメント進出をかけてバトル。<br>結果は2-1と惜敗。</p><p>ムーブからとても成長を感じるナイスチャレンジでした。<br>ダンサーはマインドがとても大切。悔しいと思えるダンサー、次を見据えて行動出来るダンサーが残ります。年齢は関係ありません。</p></div></details>
     </div>
+  </div>
+</section>
+
+<section id="music" class="fade">
+  <div class="title">MUSIC</div>
+  <div class="card musicCard">
+    <div class="recordIcon"></div>
+    <h2>お勧めの曲</h2>
+
+    <div class="musicLead">
+      紹介している曲の中で、みんなの中のトップ5を是非教えてください。<br><br>
+      ※コメントは先生の個人的意見です。綴りや説明が間違えているものもあるかと思います。
+    </div>
+
+    <details class="guideBox g1" open>
+      <summary>◾️日本語ラップメイン</summary>
+      <div class="guideContent">
+        <div class="musicTools">
+          <input id="musicSearch" class="searchInput" type="search" placeholder="曲名・アーティスト・コメントで検索">
+        </div>
+        <div id="musicList" class="musicList"></div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -741,23 +304,7 @@ ul{padding-left:20px}
   <div class="title">EVENT</div>
   <div class="card eventCard">
     <h2>イベント予定</h2>
-    <ul>
-      <li>PB2</li>
-      <li>発表会</li>
-      <li>地域イベント</li>
-      <li>コンテスト</li>
-    </ul>
-  </div>
-</section>
-
-<section class="fade">
-  <div class="title">MUSIC</div>
-  <div class="card">
-    <h2>お勧めの曲</h2>
-    <p>
-      今月の1曲：曲名をここに入力<br>
-      音の取り方・リズム・表現を意識して聴いてください。
-    </p>
+    <ul><li>PB2</li><li>発表会</li><li>地域イベント</li><li>コンテスト</li></ul>
   </div>
 </section>
 
@@ -765,12 +312,7 @@ ul{padding-left:20px}
   <div class="title">TRAINING</div>
   <div class="card trainCard">
     <h2>練習方法</h2>
-    <ul>
-      <li>基礎をゆっくり確認</li>
-      <li>カウントで正確に練習</li>
-      <li>音で何度も通す</li>
-      <li>最後は表現まで意識</li>
-    </ul>
+    <ul><li>基礎をゆっくり確認</li><li>カウントで正確に練習</li><li>音で何度も通す</li><li>最後は表現まで意識</li></ul>
   </div>
 </section>
 
@@ -778,24 +320,121 @@ ul{padding-left:20px}
   <div class="title">W NEWS</div>
   <div class="card newsCard">
     <h2>選抜通信</h2>
-    <p>
-      今週のテーマ：継続。<br>
-      小さな積み重ねが、大きな力になります。
-    </p>
+    <p>今週のテーマ：継続。<br>小さな積み重ねが、大きな力になります。</p>
   </div>
 </section>
 
-<div class="footer">
-  © Studio Wonda
-</div>
+<div class="footer">© Studio Wonda</div>
 
 <script>
+const songs = [
+  ["My life","https://youtu.be/SfEd0PA_rYI?si=vtmt3BGP6LTSXz8-","洗濯物干すのもHIPHOPというワードはダンサーでも知らない人はいないレベルです"],
+  ["好きなこと","https://youtu.be/tDri5QEt4bM?si=7nT4mrkTPs4W3e0Q","ワンダでもよくかけています"],
+  ["奇跡","https://youtu.be/bFUdubnjm4k?si=trOVq8pzxpm_Q3TM","アナーキーさんの曲でトップクラスに好きな曲です"],
+  ["クズ","https://youtu.be/8OU9dbFjsT0?si=cWli6RlO6LvSjxaF","ガドロさんが人気になったキッカケの曲です"],
+  ["Pellicule","https://youtu.be/ueq2QFIIpu0?si=brem1gCyUbeBxwaH","ポエトリーを流行らせたレジェンドです"],
+  ["雨降りの月曜","https://youtu.be/yEpKC0wXy4M?si=TYo5YX3m4lb8-k50","トラックもバースも凄く良いです"],
+  ["27才のリアル","https://youtu.be/tmJBGEFXOvU?si=GpaSJ7FqqBgbssWv","狐火さんは個人的凄く聴いていた時期がありました。ポエトリー好きな人は好きだと思います"],
+  ["Just Right","https://youtu.be/MvC6gZJ3rTM?si=F7a821R-f3GJzD6R","最近出た曲です。凄く好きです"],
+  ["地元LOVE","https://youtu.be/H29mpVrtbCA?si=dTWPP6ziG-quopXU","組み合わせ最強の2人です。出た時衝撃でした"],
+  ["少ない仲間","https://youtu.be/0EcjmbZYE1Q?si=g8lnyBdRqBIL1WbT","最近出た曲ですが、耳に残る良い曲です"],
+  ["Life Style","https://youtu.be/yirVxFBnp2o?si=RqioOLChECeHlT5q","BADHOPの入口として聴いてみると凄く良いです"],
+  ["希望の炎","https://youtu.be/7-HEkkTSI6k?si=oNvksJgKrccNDBpC","ダンスを始めてすぐくらいに出たアルバムに入っていて、MDで毎日聴いていました"],
+  ["未来予想図","https://youtu.be/PP-txvj87sQ?si=i5vfDb0kMTpTGhR3","R指定が歌っている曲で僕は1番好きです"],
+  ["人間失格","https://youtu.be/ztiJi2D-TeU?si=wHUOSxpkLszYSDbq","若くしてリアルを歌っている曲です。ゴメスは刺さる人には刺さると思います"],
+  ["LIFE","https://youtu.be/xMpB6NosM3Y?si=rlJGGRrNYF2ouk7y","ポエトリーの中でも詩人として凄い才能だと思います"],
+  ["心配すんな","https://youtu.be/INpauGq0MN0?si=2-zE1I0IKD1Ors8B","名曲多いですが、般若さんの曲で1番人気だと思います"],
+  ["空を取り戻した日","https://youtu.be/wCIvYlp3ax0?si=jwFJCqVaisyF4By1","先生のお気に入りの一つです。トラックが良すぎます。一時期ずーっと聴いてました"],
+  ["ゆれる","https://youtu.be/nE1nzTE5ESA?si=TcCKjsSEF_5kv6hr","HIPHOPでChillするならこの曲です。いつかクラシックになると思います"],
+  ["ブッダの休日 / BUDDHA BRAND","https://youtu.be/6VIhuTECXb4?si=5ygQY-6qC23EBGD3","ブッダブランドは必ず覚えて欲しいです。この曲と人間発電所はダンスでも使われます"],
+  ["音色 / KREVA","https://youtu.be/WRFwZY8Pm6w?si=sti2VRUge6nteFPj","クレバの代表曲です。先生もたくさん聞いた曲です"],
+  ["スタート / KREVA","https://youtu.be/jIjDxgXcKMI?si=i_BNdvkzgUezoYgq","ライミングセンス抜群のクレバだからこそ作れる曲です"],
+  ["CHILDREN / MU-TON","https://youtu.be/_4VZFWCcb3Q?si=pAo4xpzc90qIskPR","バトルMCというイメージの強いムートンですが、素晴らしい曲がたくさんあります"],
+  ["トモダチ / ケツメイシ","https://youtu.be/BqN0DbhqAYM?si=S3nLzPugpglO5oZh","歳を重ねるごとに響きが強くなる一曲です"],
+  ["椿 / TORAUMA","https://youtu.be/1kt_lBDZgWo?si=N9QbqXP07qPrEylV","一時期レッスンで使ってました。背中を押される曲の一つです"],
+  ["十八歳の地図 / Red Eye","https://youtu.be/-_ICs8xX2-U?si=iH13K-r_-iP3Hh3V","漢さんやDOさんといった大物から目をかけられている若手です"],
+  ["カフェイン中毒 / kiki vivi lily","https://youtu.be/5_c1GQsosvs?si=5Lfj5FfWGiUjD2nr","耳に残る良い曲です。若手ダンサーに人気のあるアーティストなのでチェックしておいてください"],
+  ["Patience / Dragon Ash","https://youtu.be/sV47CZZU4dQ?si=LG4EO2FwIfkfnNKm","学生の頃から兄の影響でドラゴンアッシュが大好きで、その中でもかなり上位に入る曲です"],
+  ["情熱 / UA","https://youtu.be/R53CceEY77Y?si=UbpVj1OwuPvJeE1m","現代でもかなり聴く機会の多い曲です"],
+  ["Only Holy Story / Steady&Co.","https://youtu.be/0N6LMHaiY5U?si=aa5cOpK_Y9DZVWsJ","冬に聴きたくなる名曲です"],
+  ["今日という日 / Watson T-Pablow","https://youtu.be/EOH7Oz7bSas?si=u-UdCnTTdiX7Qat5","watsonとT-pablowの曲です"],
+  ["泣いて / Ashley 柊人","https://youtu.be/I2mSjVzPYE4?si=-_9m-UnjW6jBdqws","とても良い曲です。アシュリーはいい曲多いので是非聴いてください"],
+  ["徳之島 / 輪入道","https://youtu.be/mh9IMIQmygE?si=zptGKRbCdv1uyLI4","輪入道さんの代表曲です。とても雰囲気がよく輪入道さんにしか歌えない音楽です"],
+  ["いい時間 / EVISBEATS","https://youtu.be/06yIzV8HToM?si=2l1b7SuXvG5OBof6","エビスビーツはChill HIPHOPの名曲だらけなのでたくさん聴いてください"],
+  ["LIFELINE / KICK THE CAN CREW","https://youtu.be/ha15hY_pCkk?si=xN6ix637mBlicSD2","キックザカンクルーはクレバ、リトル、エムシーユーの3名です"],
+  ["今夜はブギーバック / 小沢健二 featuring スチャダラパー","https://youtu.be/6lKTQbrM9RI?si=kO2ELGt_AUuDZbIj","ノリも良く耳に残る曲です"],
+  ["奮エテ眠レ / ZONE THE DARKNESS","https://youtu.be/EggplZC8bM0?si=EdPMDLi8N1VXg5Ye","ZORNさんの昔の名義の曲です。ポエトリー寄りの1曲"],
+  ["MY TOWN / J-REXXX 紅桜","https://youtu.be/jEXa6Y-RK5A?si=Hv-37_XPMthCh9Sw","先生も大好きな曲です"],
+  ["世界を嫌った / Liza","https://youtu.be/6BVlWRQ3nQA?si=jk8j7Q4pXWrWUKpt","ワンダでも何度もかけています"],
+  ["LOST DOPE / B.I.G. Joe","https://www.youtube.com/watch?v=dzcMPegziyo&list=RDdzcMPegziyo&start_radio=1","Chillにもガッツリ練習にも使える最高の一曲です"],
+  ["ケモノミチ / NITRO MICROPHONE UNDERGROUND","https://www.youtube.com/watch?v=1PjD6EFL3Uk&list=RD1PjD6EFL3Uk&start_radio=1","良い意味でニトロらしくない曲だと思っています。ワンダでもたまに流します"],
+  ["WHOOO / Ozrosaurus","https://www.youtube.com/watch?v=E2WkIZScus0&list=RDE2WkIZScus0&start_radio=1","オジロザウルスの代表曲で間違いなくクラシックです"],
+  ["AREA AREA / Ozrosaurus","https://www.youtube.com/watch?v=GhUxiBp4aYo&list=RDGhUxiBp4aYo&start_radio=1","こちらもオジロの代表曲でありクラシックです"],
+  ["蜂と蝶 / Soul Scream","https://www.youtube.com/watch?v=DCqT4hQiSF4&list=RDDCqT4hQiSF4&start_radio=1","クラシックの中のクラシックです"],
+  ["屍を越えて / Gagle","https://www.youtube.com/watch?v=pfd7kOmT-kI&list=RDpfd7kOmT-kI&start_radio=1","ガグルにしか出せない雰囲気が全面に出た一曲だと思います"],
+  ["雪ノ革命 / Gagle","https://www.youtube.com/watch?v=fDLEBI3MYzk&list=RDfDLEBI3MYzk&start_radio=1","僕はガグルの曲で一番好きです"],
+  ["何回も / YZERR","https://www.youtube.com/watch?v=0bG6B5gHQf8&list=PLeq_xZI0luKx7HcOLqpRpVckAQJ7LkBve&index=4","ワイザーはティーパブロウの双子の弟です。良い曲たくさんあります"],
+  ["Let It Be / Daichi Yamamoto","https://www.youtube.com/watch?v=DhPk4YCFoNU&list=RDDhPk4YCFoNU&start_radio=1","ワンダでもよくかけます。音楽性もリリックも素晴らしいです"],
+  ["Poetry / GOMESS","https://www.youtube.com/watch?v=jglQsQyh8y0&list=RDjglQsQyh8y0&start_radio=1","ポエトリーが好きなら刺さる曲だと思います"],
+  ["Walk This Way / ZORN feat.AKLO","https://www.youtube.com/watch?v=tOS-Yx4Qb_M&list=RDtOS-Yx4Qb_M&start_radio=1","ゾーンさんがアクロさんとリリースした最高の一曲です"],
+  ["大怪我 / 大神","https://youtu.be/OCoV25z-aBA?si=QHN_Jt8EW8haG_Yw","大神はブッダブランドとシャカゾンビによるユニットです"],
+  ["虹 / シャカゾンビ","https://youtu.be/PJgQ5VR69Ec?si=vQ1ryQWX9mx5MlC0","こちらもとても良い曲です"],
+  ["アンバランス / KICK THE CAN CREW","https://youtu.be/eG5O8VlzPso?si=K55el8rQiel3bwpv","僕が中学生の頃聴いていた曲です"],
+  ["ONE / RIP SLYME","https://youtu.be/6LbPC4ZWFok?si=QS05U1yE5gtxh20x","リップスライム、キックザカンクルーは同じ時代に活躍していました"],
+  ["静かな日々の階段を / Dragon Ash","https://youtu.be/kiD4GDWpoRY?si=ONEhDrXsCPx_FO9X","ドラゴンアッシュを語る上で絶対的に外せない1曲です"],
+  ["Winter Song / KEN THE 390","https://youtu.be/rEqN_p4oP-E?si=poLS17bYCNENB4Cv","HIPHOP IQの高いラッパーです"],
+  ["KARMA / Ashley ft Jin Dogg","https://youtu.be/m-Y-Ua86qkg?si=imXF5ePwL1p5SCLU","Jin Doggのラップがめちゃくちゃカッコいいので聴いてください"],
+  ["貧乏なんて気にしない / KOHH","https://youtu.be/1Iw_m-CXywo?si=K7V-BU3mUALcb6r2","代表曲がたくさんありますが、僕はこの曲をよく聴いています"],
+  ["Wake Up / WILYWNKA","https://youtu.be/rDeCOFsZFsA?si=Irz_7PETwJFtDeiu","今では日本のトップチャートに名前が載ることもあるラッパーです"],
+  ["俺の勝手 / 呂布カルマ","https://youtu.be/onTKv0A44PA?si=aEhFW5pxTnAJoAnV","MCバトルやバラエティのイメージが強いと思いますが、良い曲もたくさんあります"],
+  ["シグナル / Libro","https://youtu.be/R5396gKwIPg?si=2MO6Oz4X_gylAfgs","リブロさんはとにかくトラックが良い曲が多いです"],
+  ["The Choice Is Yours / RHYMESTER","https://youtu.be/OmjJWUM8VcA?si=BJ_u5q1m9ferM1yP","ライムスターは踊れる曲がたくさんあります"],
+  ["CONCRETE JUNGLE / MURO","https://youtu.be/y8IYi2ziXXI?si=mfLMFr4dWuVZTfEO","MUROさんの名曲の一つです"],
+  ["ひとりじゃないのよ / KREVA","https://youtu.be/ASyGLelLMLs?si=dqI3bQ199YkVUPJ3","リリックもトラックも凄く良いです"],
+  ["最ッ低のMC / 般若","https://youtu.be/oX-16bh9nIc?si=-dbWeUHYZ6iWNhAw","レジェンドの名を連ねたパンチラインが有名です"],
+  ["NITRO MICROPHONE UNDERGROUND","https://youtu.be/CLxWD210f5Q?si=7J-OcUP6rEPWp2xK","本当にラップの上手い人が集まったグループによる代表曲です"],
+  ["紙飛行機 / Awich","https://youtu.be/WDzPk7bczlI?si=mJR5ev1XIgv2z7ph","リアルで心に来るリリックが多く、表現力や言葉の強さが素晴らしいです"],
+  ["BlAqDeViL / SILENT KILLA JOINT","https://youtu.be/CM2doEKEjzM?si=RsXChGM3_q821S-Y","トラックメイクもされていて凄くカッコいいラッパーです"],
+  ["ザ・グレート・アマチュアリズム / RHYMESTER","https://youtu.be/HTWNPeuZL8g?si=MdRdU3mP0cckqtMp","BREAKIN'のバトルでよく使われる曲です"],
+  ["忘却 / 宇多田ヒカル KOHH","https://youtu.be/JxHubxeh8J4?si=IEWycYyOR9RNeBpk","すごい2人のコラボレーションで話題になった一曲です"],
+  ["CoCo ga OKINAWA / Rude-α feat.R'kuma","https://youtu.be/6VIPLMeSFVM?si=eCvwo68eqZkjcboa","地元をレペゼンしたとても良い曲です"],
+  ["Crayon / ZOT on the WAVE/Fuji Taito","https://youtu.be/m0x2jkAT6FE?si=2Gn15AvGgCIPApSy","一度は耳にしたことがあると思います"],
+  ["Letter / ZORN","https://youtu.be/cq8a0_LedZ8?si=73r3xZiC0Wyo0KS0","トラックもリリックもラップも完璧な一曲です"],
+  ["百合の咲く場所で / Dragon Ash","https://youtu.be/NzmuXSEwKWs?si=v2mFyqr68FnolfU1","凄くテンションの上がる曲です"],
+  ["let go / m-flo YOSHIKA","https://youtu.be/HOsiSE_JTOM?si=5Gu41Cjf7O6uIzdR","クラブでもたくさんかかっていました"],
+  ["NO MORE / JASMINE","https://youtu.be/buwIKCfCBr4?si=UtrLIYGyJUNW2tYw","クラブでかかったりショーケースでも使われていました"],
+  ["足跡 / 19","https://youtu.be/U3tRjhI_46I?si=4wMSqnn0y7MY4ovH","知らない人の方が多いと思いますが、凄く良い曲です"],
+  ["光 / 宇多田ヒカル","https://youtu.be/AlMdDpUWFFI?si=gHHoT9YcICsI3Hp1","宇多田ヒカルさんはHIPHOPヘッズにも人気のアーティストです"],
+  ["大切 / FUNKY MONKEY BABYS","https://youtu.be/ww3dlgnT45Y?si=J0lwQn-BIUJRvf5V","良い曲たくさんあるアーティストです"]
+];
+
+const list = document.getElementById("musicList");
+const search = document.getElementById("musicSearch");
+
+function renderSongs(keyword=""){
+  const k = keyword.trim().toLowerCase();
+  list.innerHTML = "";
+  songs
+    .filter(s => (s[0] + s[2]).toLowerCase().includes(k))
+    .forEach(song => {
+      const div = document.createElement("div");
+      div.className = "song";
+      div.innerHTML = `
+        <div class="songTitle">🎵 ${song[0]}</div>
+        <div class="songComment">${song[2]}</div>
+        <a class="youtube" href="${song[1]}" target="_blank" rel="noopener">YouTubeで聴く</a>
+      `;
+      list.appendChild(div);
+    });
+}
+
+search.addEventListener("input", e => renderSongs(e.target.value));
+renderSongs();
+
 const items=document.querySelectorAll(".fade");
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
+    if(entry.isIntersecting){entry.target.classList.add("show");}
   });
 },{threshold:.14});
 items.forEach(item=>observer.observe(item));
