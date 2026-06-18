@@ -71,6 +71,21 @@ section{
   color:#2b1700;
   border:4px solid #2b1700;
   border-radius:999px;
+  word-break:keep-all;
+}
+
+.heroMessage{
+  margin:18px auto 0;
+  max-width:310px;
+  padding:12px 14px;
+  background:#2b1700;
+  color:#fff200;
+  border:4px solid #fff;
+  border-radius:18px;
+  font-size:15px;
+  line-height:1.5;
+  text-shadow:2px 2px 0 #000;
+  transform:rotate(2deg);
 }
 
 .title{
@@ -83,13 +98,14 @@ section{
   box-shadow:6px 6px 0 #ff0055;
   transform:rotate(-2deg);
   font-size:22px;
+  word-break:keep-all;
 }
 
 .card{
   padding:20px;
   border:4px solid #fff;
   border-radius:24px;
-  background:rgba(255,255,255,.88);
+  background:rgba(255,255,255,.9);
   box-shadow:0 8px 0 #2b1700,0 0 22px rgba(255,255,255,.5);
 }
 
@@ -98,12 +114,18 @@ section{
   font-size:24px;
   color:#ff4d00;
   text-shadow:2px 2px 0 #fff;
+  line-height:1.35;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
 }
 
 .card h3{
   margin:20px 0 8px;
   font-size:18px;
   color:#ff0055;
+  line-height:1.45;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
 }
 
 .card p,.card li{
@@ -111,6 +133,8 @@ section{
   font-weight:bold;
   line-height:1.8;
   font-size:15px;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
 }
 
 .btn{
@@ -125,6 +149,7 @@ section{
   background:linear-gradient(135deg,#ff0055,#ff8a00);
   box-shadow:0 7px 0 #2b1700;
   text-shadow:2px 2px 0 #2b1700;
+  word-break:keep-all;
 }
 
 .monthTitle{
@@ -132,6 +157,8 @@ section{
   font-size:28px;
   color:#2b1700;
   margin-bottom:12px;
+  line-height:1.35;
+  word-break:keep-all;
 }
 
 .closedNotice{
@@ -150,14 +177,15 @@ section{
 .scheduleList,
 .lessonGuide,
 .reportGrid,
-.musicBlocks{
+.musicBlocks,
+.newsList{
   display:grid;
   gap:14px;
 }
 
 .dayCard{
   display:grid;
-  grid-template-columns:86px 1fr;
+  grid-template-columns:82px 1fr;
   gap:12px;
   padding:14px;
   background:#fff8dd;
@@ -171,15 +199,16 @@ section{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:72px;
+  min-height:68px;
   border-radius:14px;
   background:linear-gradient(135deg,#ff8a00,#fff200);
   border:3px solid #fff;
   color:#2b1700;
   text-align:center;
   font-family:"Arial Black","Hiragino Kaku Gothic ProN",sans-serif;
-  font-size:18px;
+  font-size:17px;
   line-height:1.2;
+  word-break:keep-all;
 }
 
 .lessonBox{
@@ -200,6 +229,8 @@ section{
   font-weight:900;
   font-size:14px;
   margin-bottom:3px;
+  line-height:1.4;
+  word-break:keep-all;
 }
 
 .name{
@@ -207,7 +238,9 @@ section{
   color:#2b1700;
   font-weight:900;
   font-size:15px;
-  line-height:1.45;
+  line-height:1.5;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
 }
 
 .closedCard{background:#ffe1ec}
@@ -228,7 +261,8 @@ section{
 
 .guideBox,
 .reportMonth,
-.musicBlock{
+.musicBlock,
+.newsItem{
   border:4px solid #2b1700;
   border-radius:18px;
   overflow:hidden;
@@ -236,16 +270,32 @@ section{
   box-shadow:0 5px 0 #2b1700;
 }
 
+.guideBox:nth-child(odd),
+.reportMonth:nth-child(odd),
+.newsItem:nth-child(odd){
+  transform:rotate(-.35deg);
+}
+
+.guideBox:nth-child(even),
+.reportMonth:nth-child(even),
+.newsItem:nth-child(even){
+  transform:rotate(.35deg);
+}
+
 .guideBox summary,
 .reportMonth summary,
-.musicBlock summary{
+.musicBlock summary,
+.newsHead{
   cursor:pointer;
   list-style:none;
   padding:16px;
   color:#fff;
   font-size:18px;
+  line-height:1.45;
   text-shadow:2px 2px 0 #2b1700;
   border-bottom:4px solid #2b1700;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
 }
 
 .guideBox summary::-webkit-details-marker,
@@ -256,13 +306,15 @@ section{
 
 .guideContent,
 .reportBody,
-.musicBody{
+.musicBody,
+.newsBody{
   padding:16px;
   font-family:sans-serif;
 }
 
 .guideContent p,
-.reportBody p{
+.reportBody p,
+.newsBody p{
   margin:0 0 14px;
   font-weight:bold;
   line-height:1.8;
@@ -330,6 +382,7 @@ section{
   margin:0 0 8px;
   color:#ff0055;
   font-size:18px;
+  line-height:1.45;
 }
 
 .song p{
@@ -355,6 +408,18 @@ section{
 .trainCard{background:linear-gradient(135deg,#d9ffe8,#fff)}
 .newsCard{background:linear-gradient(135deg,#f2ddff,#fff)}
 
+.newsHead{
+  background:linear-gradient(135deg,#7b2cff,#ff4de3);
+}
+
+.newsItem:nth-child(2n) .newsHead{
+  background:linear-gradient(135deg,#ff0055,#ff8a00);
+}
+
+.newsItem:nth-child(3n) .newsHead{
+  background:linear-gradient(135deg,#006dff,#00c8ff);
+}
+
 ul{padding-left:20px}
 
 .footer{
@@ -364,13 +429,31 @@ ul{padding-left:20px}
   font-size:12px;
 }
 
-@media(max-width:380px){
+@media(max-width:390px){
+  section{
+    padding:40px 12px;
+  }
+
   .dayCard{
-    grid-template-columns:74px 1fr;
+    grid-template-columns:70px 1fr;
     gap:10px;
     padding:12px;
   }
 
-  .dayLabel{font-size:16px}
-  .name{font-size:14px}
+  .dayLabel{
+    font-size:15px;
+    min-height:64px;
+  }
+
+  .name{
+    font-size:14px;
+  }
+
+  .card{
+    padding:16px;
+  }
+
+  .logoBox h1{
+    font-size:42px;
+  }
 }
