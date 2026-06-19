@@ -502,3 +502,47 @@ ul{padding-left:20px}
     line-height:1.75;
   }
 }
+/* --- text overflow fix --- */
+.card h2,
+.card h3,
+.card p,
+.card li,
+.name,
+.time,
+.newsHead,
+.newsBody p,
+.lessonItem p,
+.song h3,
+.song p{
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.noBreak{
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.newsHead{
+  font-size:15px;
+  line-height:1.45;
+}
+
+@media(max-width:390px){
+  .dayCard{
+    grid-template-columns:64px 1fr;
+  }
+
+  .dayLabel{
+    font-size:14px;
+  }
+
+  .name{
+    font-size:13.5px;
+  }
+
+  .time{
+    font-size:13.5px;
+  }
+}
