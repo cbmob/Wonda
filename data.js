@@ -318,7 +318,29 @@ const MUSIC_GROUPS = [
       ['NO MORE / JASMINE','https://youtu.be/buwIKCfCBr4?si=UtrLIYGyJUNW2tYw','クラブでかかったりショーケースでも使われていました。'],
       ['足跡 / 19','https://youtu.be/U3tRjhI_46I?si=4wMSqnn0y7MY4ovH','凄く良い曲です。'],
       ['光 / 宇多田ヒカル','https://youtu.be/AlMdDpUWFFI?si=gHHoT9YcICsI3Hp1','HIPHOPヘッズにも人気のアーティストです。'],
-      ['大切 / FUNKY MONKEY BABYS','https://youtu.be/ww3dlgnT45Y?si=J0lwQn-BIUJRvf5V','良い曲たくさんあるアーティストです。']
+      ['大切 / FUNKY MONKEY BABYS','https://youtu.be/ww3dlgnT45Y?si=J0lwQn-BIUJRvf5V','良い曲たくさんあるアーティストです。'],
+
+      ['雨上がり / VERRY SMoL','https://youtu.be/JZZDRgvmRII?si=lNMzXVVhr_pe1Lfc','ラップスタアで一躍有名になったラッパーです。'],
+      ['Magic voice / Alif Wolf','https://youtu.be/bsPed5vxcCU?si=h4ThlphGB1Pp44vz','ひと騒動あった後、音源のクオリティが高く再評価されています。'],
+      ['Bane Bane / KTちゃん ft. DOTAMA','https://youtu.be/Wxfmduk0SII?si=923Q4kkHbdQHiScZ','MC BATTLEを盛り上げたラッパーです。'],
+      ['楽園ベイベー / RIP SLYME','https://youtu.be/ZCTdhSLsREE?si=hWYCH6Fy5yOe7bRU','古い曲ですが、今でもたまにかかります。'],
+      ['NINOKUNI / OZworld','https://youtu.be/BP2WeQyETiA?si=_ofsnoFFttB3WVw_','雰囲気がとても良いです。'],
+      ['伝説 / GOMESS ft daoko','https://youtu.be/Ey6BLXv4wd4?si=yfXZlNFQ5STu7lBP','好みによると思いますが、とても惹き込まれます。'],
+      ['越冬 / ICE BAHN','https://youtu.be/Hi_7ix67GFI?si=A9XwFH3PyRCd3FtQ','アイスバーンの代表曲です。'],
+      ['911 / キングギドラ','https://youtu.be/S96_XCmKINE?si=TkUFiIEzZPn3nUX3','キングギドラはメッセージ性の強い曲が多いです。'],
+      ['Grateful Days / Dragon Ash ft. Zeebra','https://youtu.be/zSYP29oFBk0?si=PJtL5iiTO2bvhtWx','俺は東京生まれHIPHOP育ちというパンチラインはとても有名です。'],
+      ['クリスマスイブRap / KICK THE CAN CREW','https://youtu.be/L0kztbkg1DQ?si=Wl8KlH5W9wZckmPb','クリスマスに聴きたくなる一曲です。'],
+      ['Hatsukoino Whats going on / Little & トータス松本','https://youtu.be/dDL9sYH0MMI?si=gAA9T6Y17Ju5xq-F','異色の2人によるコラボ曲です。'],
+      ['Street Dreams / Zeebra','https://youtu.be/bYd6E8D4XB4?si=vbLFyk_R8suJkqGq','クラシックの一曲と言っても良いと思います。'],
+      ['I LOVE HIPHOP / Dragon Ash','https://youtu.be/ImrbB32fecY?si=ucqzCoTj42zrEz3h','HIPHOP時代にリリースされた一曲です。'],
+      ['そなたの心の隙間 / 日高大地','https://youtu.be/2hYLxY2xOBA?si=2qq4zrktSXua6kbT','ゆったりした良い曲です。'],
+      ['君のまま / 百足 & 韻マン','https://youtu.be/u7rBhwaMGwM?si=Z1-Ii5Pixe-9I52x','MCバトルから有名になった2人による曲です。'],
+      ['花と雨 / SEEDA','https://youtu.be/J2cJdA-XydU?si=3mX88IUGXWNdof2L','ワンダでもたまにかけるとても良い曲です。'],
+      ['これからだ / SIMON JAP','https://youtu.be/jY2rfvfAMxY?si=FrhJLwO4JeLyAPLL','真っ直ぐなlyricを書くアングラのラッパーです。'],
+      ['マジでハイ / 梅田サイファー','https://youtu.be/vgwhZyKQUU8?si=1L_DNSYIQc85TnG8','テンションの上がるビートも有名な一曲です。'],
+      ['新宿ストリート・ドリーム / 漢 a.k.a GAMI','https://youtu.be/sVmJjDKFy_k?si=nEKMFt7ZgFycfzQa','JHIPHOPの一時代を作った1人です。'],
+      ['My Verse / Charlu','https://youtu.be/A_de-d18XF8?si=rtJa-uaU_maCtOik','シャルルさんはリアルで印象的なlyricが多いです。'],
+      ['読みかけの本 / MOB ARTIST','https://youtu.be/N8k8tuCRBxc?si=7aFbAnaBp2JPmn_D','僕が作った曲です。たくさん聴いてください。']
     ]
   }
 ];
